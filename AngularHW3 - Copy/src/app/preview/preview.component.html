@@ -1,0 +1,12 @@
+<div class="animal">
+    <img [src]="card.photo" alt="{{ card.name }}" class="pet-photo">
+    <div class="pet-details">
+        <h4 class="pet-name">{{ card.name }}</h4>
+        <p class="species">{{ card.species }}</p>
+        <p class="card-age">Age: {{ age }}</p>
+        <p class="card-favorite-foods" *ngIf="card?.favFoods?.length">Favorite Foods:</p>
+        <ul class="foods-list" *ngIf="card?.favFoods?.length">
+            <li *ngFor="let food of card.favFoods" [innerHTML]="food"></li>
+        </ul>
+    </div>
+</div>
